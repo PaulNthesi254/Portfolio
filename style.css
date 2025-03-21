@@ -150,3 +150,58 @@ button {
 button:hover {
     background-color: #555;
 }
+/* Light mode styles (default) */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark
+/* Default Light Mode */
+body {
+    background-color: white;
+    color: black;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+button#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button#darkModeToggle:hover {
+    background-color: #555;
+}
+.skill {
+    margin: 10px 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
