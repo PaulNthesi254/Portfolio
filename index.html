@@ -15,8 +15,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="darkModeToggle">🌙 Toggle Dark Mode</button>
-                </li>
+                
             </ul>
         
         </nav>
@@ -24,13 +23,13 @@
         <header>
             <h1>Welcome to My Portfolio</h1>
             <p>Hi, I'm [Your Name] - A Beginner Web Developer</p>
+            <li><button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+            </li>
         </header>
     
         <section id="about">
             <h2>About Me</h2>
-            <a id="resumeButton" href="resume.pdf" download>
-                <button>Download Resume</button>
-            </a>
+          
             
             <p>I am learning to build dynamic websites using JavaScript, HTML, and CSS.</p>
             <section id="skills">
@@ -47,6 +46,9 @@
                     <p>JavaScript</p>
                     <div class="skill-bar"><div class="progress" style="width: 60%;">60%</div></div>
                 </div>
+                <a id="resumeButton" href="resume.pdf" download>
+                    <button>Download Resume</button>
+                </a>
             </section>
             
         </section>
@@ -110,6 +112,19 @@
         <div id="clock"></div>
 
         <script src="script.js"></script>
+        <section id="blog">
+            <h2>Latest Blog Posts</h2>
+            <div id="blogPosts">
+                <!-- Blog posts will be dynamically added here -->
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>My Projects</h2>
+            <div id="projects">
+                <!-- Projects will be dynamically added here -->
+            </div>
+        </section>
+        
     </body>
     
 

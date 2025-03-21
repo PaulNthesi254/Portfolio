@@ -134,3 +134,41 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         document.getElementById("contactForm").reset();
     }, 1000);
 });
+const blogPosts = [
+    { title: "My Journey into Web Development", content: "I started learning web development with JavaScript, and it's been an amazing experience!" },
+    { title: "Understanding JavaScript Closures", content: "Closures can be tricky, but they are a powerful feature of JavaScript. Here's how they work..." },
+    { title: "Tips for Writing Clean Code", content: "Clean code is not just about functionality, but also readability and maintainability. Here are my top tips..." }
+];
+
+function loadBlogPosts() {
+    const blogContainer = document.getElementById("blogPosts");
+    blogPosts.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("blog-post");
+        postElement.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+        blogContainer.appendChild(postElement);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadBlogPosts);
+const projects = [
+    { title: "Portfolio Website", image: "portfolio.png", link: "https://github.com/yourusername/portfolio" },
+    { title: "Task Manager App", image: "task-manager.png", link: "https://github.com/yourusername/task-manager" },
+    { title: "Weather App", image: "weather-app.png", link: "https://github.com/yourusername/weather-app" }
+];
+
+function loadProjects() {
+    const projectContainer = document.getElementById("projects");
+    projects.forEach(project => {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("project");
+        projectElement.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
+            <a href="${project.link}" target="_blank">View Project</a>
+        `;
+        projectContainer.appendChild(projectElement);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadProjects);
