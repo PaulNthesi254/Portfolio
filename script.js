@@ -117,3 +117,20 @@ function updateClock() {
 // Update clock every second
 setInterval(updateClock, 1000);
 updateClock(); // Initialize on page load
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const responseElement = document.getElementById("formResponse");
+
+    // Simulating form submission (you can replace this with a backend service)
+    setTimeout(() => {
+        responseElement.textContent = `Thank you, ${name}! Your message has been sent.`;
+        responseElement.style.color = "green";
+
+        // Reset form
+        document.getElementById("contactForm").reset();
+    }, 1000);
+});

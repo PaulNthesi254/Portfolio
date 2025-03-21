@@ -28,6 +28,10 @@
     
         <section id="about">
             <h2>About Me</h2>
+            <a id="resumeButton" href="resume.pdf" download>
+                <button>Download Resume</button>
+            </a>
+            
             <p>I am learning to build dynamic websites using JavaScript, HTML, and CSS.</p>
             <section id="skills">
                 <h2>My Skills</h2>
@@ -62,13 +66,14 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <p id="formStatus"></p>
+            <p id="formResponse"></p>
         </section>
+        
         <section id="testimonials">
             <h2>What People Say</h2>
             <div class="testimonial-container">
