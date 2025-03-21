@@ -96,3 +96,24 @@ darkModeToggle.addEventListener("click", () => {
 if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
 }
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+
+function changeTestimonial(step) {
+    testimonials[currentTestimonial].classList.remove("active");
+    currentTestimonial = (currentTestimonial + step + testimonials.length) % testimonials.length;
+    testimonials[currentTestimonial].classList.add("active");
+}
+
+// Auto-slide every 5 seconds
+setInterval(() => changeTestimonial(1), 5000);
+function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    clockElement.textContent = timeString;
+}
+
+// Update clock every second
+setInterval(updateClock, 1000);
+updateClock(); // Initialize on page load
