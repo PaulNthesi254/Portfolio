@@ -30,12 +30,27 @@
     
         <section id="projects">
             <h2>My Projects</h2>
-            <ul>
-                <li>📌 Project 1: Portfolio Website</li>
-                <li>📌 Project 2: To-Do List (Coming Soon)</li>
-                <li>📌 Project 3: Weather App (Coming Soon)</li>
-            </ul>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="project1.jpg" alt="Project 1"></div>
+                    <div class="slide"><img src="project2.jpg" alt="Project 2"></div>
+                    <div class="slide"><img src="project3.jpg" alt="Project 3"></div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">❮</button>
+                <button class="next" onclick="moveSlide(1)">❯</button>
+            </div>
         </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formStatus"></p>
+        </section>
+        
     
         <section id="contact">
             <h2>Contact Me</h2>
